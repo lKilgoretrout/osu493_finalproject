@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+	  <link rel="stylesheet" type="text/css" href="styles.css" />
+      <title>Baucusr-Final</title>
+      
+	</head>
+    
+	<body>
+		<h2 style="color:rebeccapurple;">osu493 baucusr Final Project
+			<br>JWT protected datastore API
+		</h2>
+			 {{# if isAuthenticated }}
+			 <img style="margin-left:10px;margin-top:10px" src="wahfo!.jpg" width=10% height="auto">
+        
+			 <p>Waffle sez:</p> 
+			   <p>You are logged in to auth0! If you want to logout, click here --><span class=blink><a href="/logout">Logout!</a></span></p>
+			   <h2>The 'unique ID' data for the user "{{username}}" who is logged in:</h2>
+			   <b> {{user_id}} </b>
+		   
+			   
+			 {{else}}
+			 <img style="margin-left:10px;margin-top:10px" src="IMG_7511(1).jpg" width=10% height="auto">
+		      <p>Biscuit sez: You are not AUTHENTICATED ! Sign in --><span class=blink><a href="/login">Login!</a></span></p>
+			 {{/if}}
+			 
+			 <h2>JWT OAuth2 Token for the AUTHORIZED user:</h2><br>
+			 
+			 {{# if ACCESS_TOKEN }}
+			 <b>{{ACCESS_TOKEN}}</b>
+			 {{else}}
+			 <b>NO JWT YET. LOGIN TO GET ONE</b>
+			 {{/if}}
+			 
+    </body>
+</html>
+ 

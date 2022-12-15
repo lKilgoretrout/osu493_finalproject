@@ -1,0 +1,19 @@
+
+/* snappy blinking css courtesy of stackoverflow:
+	https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3
+*/
+
+.blink {
+  color:red;
+  background-color:black;
+  font-size: 42px;
+  animation: blinker 1s step-start infinite;
+}
+
+p { font-size: x-small; }
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
